@@ -1,15 +1,15 @@
 repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer.Character
 
 
-local MoonArray = Instance.new("ScreenGui")
+local clownclientArray = Instance.new("ScreenGui")
 local InvisFrame = Instance.new("Frame")
 local UIListLayout = Instance.new("UIListLayout")
-MoonArray.Name = "MoonArray"
-MoonArray.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-MoonArray.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-MoonArray.ResetOnSpawn = false
+clownclient.Name = "MoonArray"
+clownclient.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+clownclient.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+clownclient.ResetOnSpawn = false
 InvisFrame.Name = "InvisFrame"
-InvisFrame.Parent = MoonArray
+InvisFrame.Parent = clownclientArray
 InvisFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 InvisFrame.BackgroundTransparency = 1.000
 InvisFrame.BorderSizePixel = 0
@@ -77,7 +77,7 @@ local events = {
 }
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Moon 3.0", "DarkTheme")
+local Window = Library.CreateLib("Clownclient", "DarkTheme")
 
 local Combat = Window:NewTab("Combat")
 local Movement = Window:NewTab("Movement")
@@ -253,18 +253,18 @@ end)
 --]]
 
 runcode(function()
-	local MoonLogo
+	local clownclientLogo
 	RenderSection:NewToggle("Logo", "", function(state)
 		if state then
 			MakeModule("Logo")
 			MoonLogo = Instance.new("ScreenGui")
 			local Frame = Instance.new("Frame")
 			local TextLabel = Instance.new("TextLabel")
-			MoonLogo.Name = "MoonLogo"
+			MoonLogo.Name = "clownclientLogo"
 			MoonLogo.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 			MoonLogo.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 			MoonLogo.ResetOnSpawn = false
-			Frame.Parent = MoonLogo
+			Frame.Parent = clownclientLogo
 			Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 			Frame.BackgroundTransparency = 0.500
 			Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -279,20 +279,20 @@ runcode(function()
 			TextLabel.Position = UDim2.new(0.11, 0, 0.1, 0)
 			TextLabel.Size = UDim2.new(0, 200, 0, 33)
 			TextLabel.Font = Enum.Font.SourceSans
-			TextLabel.Text = "Moon - 3.0 - Public Beta"
+			TextLabel.Text = "Private beta clownclient"
 			TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 			TextLabel.TextSize = 30.000
 			TextLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 			TextLabel.TextStrokeTransparency = 0.200
 		else
-			MoonLogo:Remove()
+			clownclientLogo:Remove()
 			RemoveModule("Logo")
 		end
 	end)
 end)
 
 runcode(function()
-	RenderSection:NewToggle("FemboyAmbient", "'My favorite module', -Spring67#2760", function(state)
+	RenderSection:NewToggle("FemboyAmbient", "'why did i make this', -genl", function(state)
 		if state then
 			MakeModule("FemboyAmbient")
 			lighting.Ambient = Color3.fromRGB(255, 85, 255)
