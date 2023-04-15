@@ -1,14 +1,14 @@
 repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer.Character
 
-local MoonArray = Instance.new("ScreenGui")
+local clownclientArray = Instance.new("ScreenGui")
 local InvisFrame = Instance.new("Frame")
 local UIListLayout = Instance.new("UIListLayout")
-MoonArray.Name = "MoonArray"
-MoonArray.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-MoonArray.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-MoonArray.ResetOnSpawn = false
+clownclientArray.Name = "clownclientArray"
+clownclientArray.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+clownclientArray.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+clownclientArray.ResetOnSpawn = false
 InvisFrame.Name = "InvisFrame"
-InvisFrame.Parent = MoonArray
+InvisFrame.Parent = clownclientArray
 InvisFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 InvisFrame.BackgroundTransparency = 1.000
 InvisFrame.BorderSizePixel = 0
@@ -94,7 +94,7 @@ local events = {
 --rest of script ig
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Moon 3.0", "DarkTheme")
+local Window = Library.CreateLib("clownclient", "DarkTheme")
 
 local Combat = Window:NewTab("Combat")
 local Movement = Window:NewTab("Movement")
@@ -322,7 +322,7 @@ end)
 --[[
 runcode(function()
     local FunnyFlyTog = false
-    MovementSection:NewToggle("FunnyFly", "not longer fly, made 4 fun xD. Also if u wanna use this, get rid of the code that hides this XD", function(state)
+    MovementSection:NewToggle("FunnyFly", "not longer fly, made 4 fun xD.", function(state)
         if state then
             FunnyFlyTog = true
             game.Workspace.Gravity = 4
@@ -341,18 +341,18 @@ end)
 --]]
 
 runcode(function()
-	local MoonLogo
+	local clownclientLogo
 	RenderSection:NewToggle("Logo", "", function(state)
 		if state then
 			MakeModule("Logo")
-			MoonLogo = Instance.new("ScreenGui")
+			clownclientLogo = Instance.new("ScreenGui")
 			local Frame = Instance.new("Frame")
 			local TextLabel = Instance.new("TextLabel")
-			MoonLogo.Name = "MoonLogo"
-			MoonLogo.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-			MoonLogo.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-			MoonLogo.ResetOnSpawn = false
-			Frame.Parent = MoonLogo
+			clownclientLogo.Name = "clownclientLogo"
+			clownclientLogo.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+			clownclientLogo.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+			clownclientLogo.ResetOnSpawn = false
+			Frame.Parent = clownclientLogo
 			Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 			Frame.BackgroundTransparency = 0.500
 			Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -367,13 +367,13 @@ runcode(function()
 			TextLabel.Position = UDim2.new(0.11, 0, 0.1, 0)
 			TextLabel.Size = UDim2.new(0, 200, 0, 33)
 			TextLabel.Font = Enum.Font.SourceSans
-			TextLabel.Text = "Moon - 3.0 - Public Beta"
+			TextLabel.Text = "Private beta clownware"
 			TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 			TextLabel.TextSize = 30.000
 			TextLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 			TextLabel.TextStrokeTransparency = 0.200
 		else
-			MoonLogo:Remove()
+			clownclientLogo:Remove()
 			RemoveModule("Logo")
 		end
 	end)
@@ -495,7 +495,7 @@ runcode(function()
 end)
 --]]
 
-notify("Moon", "Loaded Moon..", 3)
-notify("Moon", "Dm me on my 'Rekt' Account to tell me anything you want", 10)
-notify("Moon", "More modules and features soon", 5)
-notify("Moon", "join the discord @.gg/qYUZae7CVj", 10)
+notify("Clownware Private", "Loaded clownware..", 3)
+notify("Clownware Private", "If u want config dm genl private", 10)
+notify("Clownware Private", "More modules and features soon", 5)
+notify("Clownware Private", "pro", 10)
